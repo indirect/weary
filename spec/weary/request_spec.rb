@@ -153,7 +153,7 @@ describe Weary::Request do
       req = described_class.new "https://api.github.com/gists", "POST"
       cred = ["mwunsch", "secret-passphrase"]
       req.basic_auth *cred
-      req.basic_auth.should be_true
+      req.basic_auth.should be true
     end
   end
 
@@ -170,7 +170,7 @@ describe Weary::Request do
       req = described_class.new "https://api.github.com/gists", "POST"
       cred = ["consumer_key", "access_token"]
       req.oauth *cred
-      req.oauth.should be_true
+      req.oauth.should be true
     end
   end
 

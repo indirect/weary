@@ -6,7 +6,7 @@ gem "rake", "~> 13.0"
 gem "excon"
 
 group :test do
-  gem "rspec", "~> 2.13"
+  gem "rspec", "~> 3.0"
   gem "webmock", "~> 1.8"
 end
 
