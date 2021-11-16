@@ -59,7 +59,7 @@ module Weary
       raise "The response does not contain a body" if body.nil? || body.empty?
       if block_given?
         yield body, content_type
-      elsif content_type&.=~(/json($|;.*)/)
+      elsif content_type&.any?{|t| t =~ /json($|;.*)/ }
         MultiJson.decode body
       else
         raise "Unable to parse Content-Type: #{content_type}"
