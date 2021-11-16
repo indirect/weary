@@ -5,6 +5,7 @@ autoload :MultiJson, 'multi_json'
 module Weary
   class Response
     include Rack::Response::Helpers
+    include Rack::Request::Env
 
     def initialize(body, status, headers)
       @response = Rack::Response.new body, status, headers
